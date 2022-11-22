@@ -80,12 +80,12 @@ public class Interactive extends Console{
         System.out.println("To add->");
         int categoryStageAnswer = categoryStage();
         if (categoryStageAnswer == categoryStageAnswers.NOTEBOOK.getCategoryNumber()){
-            Notebook notebook = (Notebook) Notebook.createElectronicFromTerminal();
+            Electronic notebook = Notebook.createElectronicFromTerminal();
             mongo.insertOneDocumentToCollection(notebook.generateMongoDBDocument(),notebooksCollection);
             Notebook.printTableHeader();
             notebook.printDetails();
         } else if(categoryStageAnswer == categoryStageAnswers.CELL_PHONE.getCategoryNumber()) {
-            CellPhone cellPhone = (CellPhone) CellPhone.createElectronicFromTerminal();
+            Electronic cellPhone = CellPhone.createElectronicFromTerminal();
             mongo.insertOneDocumentToCollection(cellPhone.generateMongoDBDocument(), cellPhonesCollection);
             CellPhone.printTableHeader();
             cellPhone.printDetails();

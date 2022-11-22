@@ -31,7 +31,7 @@ public class Electronic extends Product {
         generatedId = new ObjectId();
         setElectronicId(generatedId);
     }
-    
+
     private Electronic(double unitPrice, int discountRate, long stockAmount, String brandName, String productName, double screenSize, int batteryPower, int ram, String color, int memoryStorage) {
         generatedId = new ObjectId();
         setElectronicId(generatedId);
